@@ -9,7 +9,7 @@ namespace TMDB_demo.Services
 {
     public class UpdateService : IUpdateSevice
     {
-        private readonly object changeLock = new();
+        private readonly object changeLock = new object();
 
         private readonly ITmdbDataService _tmdbService;
         private readonly IMovieService _movieService;
